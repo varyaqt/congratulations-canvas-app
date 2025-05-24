@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@a1rth/css-normalize": "^1.1.9",
+    "@sberdevices/assistant-client": "^5.0.2",
     "classnames": "^2.5.1",
     "imask": "^7.6.1"
   }
