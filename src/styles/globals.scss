@@ -1,0 +1,111 @@
+body {
+  @include fluid-text(40, 16);
+
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  color: var(--color-red);
+  background-color: var(--color-yellow);
+
+  &::before {
+    position: fixed; // Фиксируем относительно viewport
+    content: "";
+    background: url("../assets/images/decoration_top.svg") center/contain
+      no-repeat;
+    width: min(35vw, 350px);
+    height: min(70vh, 700px);
+    z-index: -1;
+    top: 0;
+    left: 0;
+    margin-left: -10%;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &::after {
+    position: fixed; // Фиксируем относительно viewport
+    content: "";
+    background: url("../assets/images/decoration_down.svg") center/contain
+      no-repeat;
+    width: min(35vw, 350px);
+    height: min(70vh, 700px);
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    margin-right: -10%;
+
+    @include tablet {
+      margin-bottom: -10%;
+    }
+
+    @include mobile {
+      margin-bottom: -25%;
+    }
+  }
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1,
+.h1 {
+  @include fluid-text(100, 30);
+  font-family: var(--font-family-accent);
+}
+
+.h2 {
+  @include fluid-text(50, 16);
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+
+  @include hover {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    translate: -50%;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition-duration: inherit;
+  }
+}
+
+//congratulations__inner
+
+.congratulations {
+  &__inner {
+    display: grid;
+    row-gap: 15px;
+    width: 70%;
+    margin-inline: auto;
+  }
+}

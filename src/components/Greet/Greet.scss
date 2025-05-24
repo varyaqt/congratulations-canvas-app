@@ -1,0 +1,9 @@
+.greet {
+  @include flex-center;
+  background: var(--color-pink);
+  border: var(--border);
+  padding: fluid(40, 16);
+  position: relative;
+  margin-bottom: 15px;
+  font-size: fluid-text(40, 16);
+}

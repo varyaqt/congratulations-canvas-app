@@ -1,0 +1,14 @@
+.header {
+  display: grid;
+  row-gap: 10px;
+  text-align: center;
+  margin-inline: auto;
+  padding-top: 10px;
+  height: fit-content;
+  margin-bottom: 10px;
+
+  @include laptop-above {
+    padding-top: 70px;
+    margin-bottom: 20px;
+  }
+}

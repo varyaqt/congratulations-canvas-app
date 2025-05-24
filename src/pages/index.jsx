@@ -1,12 +1,17 @@
-import { Head } from "minista"
+import "@/styles"
+
+import Header from "@/layouts/Header"
+import Menu from "@/components/Menu"
+
+export const metadata = {
+  title: "Главная",
+}
 
 export default function () {
   return (
     <>
-      <Head>
-        <title>Hello!</title>
-      </Head>
-      <h1>Hello!</h1>
+      <Header />
+      <Menu />
     </>
   )
 }
