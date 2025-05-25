@@ -3,7 +3,10 @@ import path from "path"
 
 export default defineConfig({
   root: "",
-  base: "./",
+  base:
+    process.env.NODE_ENV === "production"
+      ? "/congratulations-canvas-app/" // Замените на имя вашего репозитория
+      : "/",
   public: "public",
   out: "dist",
   assets: {
@@ -45,6 +48,7 @@ export default defineConfig({
     },
     bundle: {
       outName: "bundle",
+      publicPath: "/congratulations-canvas-app/assets/",
     },
     partial: {
       usePreact: false,
