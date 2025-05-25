@@ -130,10 +130,7 @@ export default function () {
       <Header />
       <div className="congratulations__inner">
         <Button href={"/"} label={"Назад"}></Button>
-        <ul
-          className="congratulations__list"
-          style={{ whiteSpace: "pre-line" }}
-        >
+        <ul className="congratulations__list">
           {processedCongratulations.map((item, index) => (
             <li key={index} className="congratulations__item">
               <Greet text={item.text} />
