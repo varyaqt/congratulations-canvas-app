@@ -101,11 +101,9 @@ a {
 
 //congratulations__inner
 
-.congratulations {
-  &__inner {
-    display: grid;
-    row-gap: 15px;
-    width: 70%;
-    margin-inline: auto;
-  }
+.congratulations__inner {
+  display: grid;
+  row-gap: 10px;
+  width: 70%;
+  margin-inline: auto;
 }
